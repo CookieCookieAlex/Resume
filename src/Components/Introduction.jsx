@@ -10,3 +10,5 @@ export default function Introduction() {
         </section>
     )
 }
+
+//this contains only the introduction part to the website

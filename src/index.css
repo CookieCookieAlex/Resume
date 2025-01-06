@@ -1,5 +1,8 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  --font-color-primary: #484233;
+  --font-color-secondary: #e8e0cd;
   color: #484233;
   background-color: #e8e0cd;
 }
@@ -9,9 +12,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  background-color: #e8e0cd;
-}
 
 #top {
   display: flex;
@@ -19,6 +19,16 @@ html {
   justify-content: space-between;
   padding: 0 30px;
   margin-top: 5px;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-family);
+}
+p,
+h4 {
+  font-family: var(--font-secondary);
+  font-family: var(--font-color-secondary);
 }
 
 hr {
@@ -72,7 +82,6 @@ main {
   margin-top: -33px;
   z-index: 1; /* Ensure text appears above the photo */
   text-align: center;
-  
 }
 
 #cover-photo {
@@ -95,7 +104,38 @@ main {
 
   display: flex;
 
-
   overflow: hidden;
   position: relative;
+}
+
+.benner {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fffaee;
+  height: 1000px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left {
+  flex: 1; /* Takes up equal space */
+  text-align: start;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.right {
+  flex: 2; /* Takes up more space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 10px;
 }
