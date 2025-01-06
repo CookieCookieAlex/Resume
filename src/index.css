@@ -114,10 +114,10 @@ main {
 
   justify-content: space-between;
   align-items: flex-start;
-  margin: 10px;
-  padding: 10px;
+  margin: 30px;
+  padding: 50px;
   background-color: #fffaee;
-  height: 1000px;
+  
   flex-wrap: wrap;
   gap: 20px;
 }

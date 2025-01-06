@@ -23,7 +23,7 @@ export const EDUCATION = [
     date_of_completion: "October 2024",
     address: " Matice hrvatske b.b.",
     city: "88000, Mostar",
-    Country: "Bosnia and Herzegovina",
+    country: "Bosnia and Herzegovina",
   },
   {
     title: "Barmen",
