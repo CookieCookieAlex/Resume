@@ -1,10 +1,11 @@
-
+import Moon from '../assets/Moon.svg';
 
 export default function Top() {
     return (
-        <div className="top">
-            <h1>Leonardo Miscevic</h1>
-            <h2>Front-End Developer</h2>
+        <div id="top">
+            <h1>Leonardo Miščević</h1>
+            <img src={Moon} alt="Moon" />
+           
         </div>
     )
 }
