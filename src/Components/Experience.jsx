@@ -9,6 +9,7 @@ export default function Experience() {
             {WORKEXPERIENCE.map((item, index) => (
                 <div key={index} className="container">
                     <h1>{item.title}</h1>
+                    <hr />
                     <h3>{item.company}</h3>
                     <h4>{item.date_of_completion}</h4>
                     <h4>{item.country}</h4>

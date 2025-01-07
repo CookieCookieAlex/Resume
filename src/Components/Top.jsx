@@ -5,8 +5,9 @@ export default function Top() {
         <>
             <div id="top">
                 <h1>Leonardo Miščević</h1>
-                <img src={Moon} alt="Moon" />
-
+                <button class="svg-img-button">
+                    <img src={Moon} alt="Moon" />
+                </button>
             </div>
             <hr className='tophr' />
         </>
