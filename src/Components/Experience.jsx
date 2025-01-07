@@ -3,16 +3,18 @@ import { WORKEXPERIENCE } from '../ResumeData'; // Adjust the path as needed
 
 export default function Experience() {
     return (
-        <section className="exoerience">
+        <section >
+            <h1>WORK EXPERIENCE</h1>
+            <hr />
             {WORKEXPERIENCE.map((item, index) => (
-                <div key={index}>
-                    <h1>Title:{item.title}</h1>
-                    <h3>Compnay:{item.company}</h3>
-                    <h4>City:{item.city}</h4>
-                    <h4>Country:{item.country}</h4>
-                    <h4>Date:{item.date_of_completion}</h4>
-                    <p>Description:{item.description}</p>
-                    <hr />        
+                <div key={index} className="container">
+                    <h1>{item.title}</h1>
+                    <h3>{item.company}</h3>
+                    <h4>{item.date_of_completion}</h4>
+                    <h4>{item.country}</h4>
+                    <h4>{item.city}</h4>
+                    <p>{item.description}</p>
+                    <hr className="bottomline"/>   
                 </div>
                 
             ))}

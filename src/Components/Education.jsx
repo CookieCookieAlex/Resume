@@ -3,16 +3,19 @@ import { EDUCATION } from '../ResumeData'; // Adjust the path as needed
 
 export default function Education() {
     return (
-        <section className="education">
+        <section>
+            <h1>EDUCATION</h1>
+            <hr />
             {EDUCATION.map((item, index) => (
-                <div key={index}>
-                    <h1>Title:{item.title}</h1>
-                    <h3>College:{item.college}</h3>
-                    <h4>Date:{item.date_of_completion}</h4>
-                    <h4>Adress:{item.address}</h4>
-                    <h4>City:{item.city}</h4>
-                    <h4>Country:{item.country}</h4>
-                    <hr />
+                <div key={index} className="container">
+                    <h1>{item.title}</h1>
+                    <h3>{item.college}</h3>
+                    <h4>{item.date_of_completion}</h4>
+                    <h4>{item.country}</h4>
+                    <h4>{item.city}</h4>
+                    <h4>{item.address}</h4>
+                    <hr className="bottomline" />
+
                 </div>
             ))}
         </section>

@@ -1,14 +1,16 @@
+import {DIGITALSKILLS} from '../ResumeData';
+
 export default function DigitalSkills() {
     return (
-        <section className="digital-skills">
-            <h1 className=''>Digital Skills</h1>
-            <p className=''>HTML</p>
-            <p className=''>CSS</p>
-            <p className=''>JavaScript</p>
-            <p className=''>React</p>
-            <p className=''>Git</p>
-            <p className=''>GitHub</p>
-            <p className=''>Figma</p>
-        </section>
+        <section className="container">
+            <h1>DIGITAL SKILLS</h1>
+            <hr />
+            {DIGITALSKILLS.map((item) => (
+                <div key={item.id}>
+                    <h4>{item.title}</h4>
+                </div>
+            ))}
+            <hr className="bottomline" />
+        </section >
     )
 }

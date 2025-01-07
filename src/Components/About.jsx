@@ -5,9 +5,16 @@ export default function About() {
     const { title, description } = ABOUTME[0];
 
     return (
-        <section className="about">
-            <h1>{title}</h1>
-            <h4>{description}</h4>
+        <section>
+               <h1>ABOUT ME</h1>
+            {ABOUTME.map((item, index) => (
+                <div key={index} className="container">
+                 
+                    <hr />
+                    <h4>{item.description}</h4>
+                    <hr className="bottomline"/>
+                </div>
+            ))}
         </section>
     )
 }

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Top />
-      <hr />
+      
       <main>
         <Introduction />
         <Benner />

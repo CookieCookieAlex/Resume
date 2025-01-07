@@ -1,8 +1,17 @@
+import {CONTACT} from '../ResumeData';
+
 export default function Contacts() {
     return (
-        <section className="contacts">
-            <h1 className=''>Contacts</h1>
-            <p>Email:leonardomiscevic@gmail.com</p>
+        <section className="container">
+            <h1 className=''>CONTATS</h1>
+            <hr />
+              {CONTACT.map((item) => (
+                            <div key={item.id}>
+                                <h1>{item.title}</h1>
+                                <p>{item.description}</p>
+                            </div>
+                        ))}
+            <hr className="bottomline"/>
             </section>
     )
 }

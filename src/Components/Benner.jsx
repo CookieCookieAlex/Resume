@@ -17,9 +17,10 @@ export default function Benner() {
                 <Contacts />
                 <DigitalSkills />
             </div>
+            <div className="line"></div>
             <div className="right">
-                <Education />
-                <Experience />
+                <Education><h1>EDUCATION</h1></Education>
+                <Experience><h1>EXPERIENCE</h1></Experience>
             </div>
         </section>
     )

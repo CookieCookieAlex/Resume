@@ -1,9 +1,8 @@
 :root {
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --font-secondary: "Roboto", sans-serif;
+  --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: Inter,"Roboto", sans-serif;
   --font-color-primary: #484233;
-  --font-color-secondary: #e8e0cd;
-  color: #484233;
+  --font-color-secondary: #8D8365;
   background-color: #e8e0cd;
 }
 
@@ -23,12 +22,15 @@
 h1,
 h2,
 h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-primary);
+  color: var(--font-color-primary);
+  padding: 5px;
 }
 p,
 h4 {
   font-family: var(--font-secondary);
-  font-family: var(--font-color-secondary);
+  color: var(--font-color-secondary);
+  padding: 5px;
 }
 
 hr {
@@ -36,7 +38,14 @@ hr {
   border: none;
   border-top: 2px solid #010101;
   margin: 0;
-  justify-self: center;
+  justify-self: start;
+}
+
+.bottomline {
+  width: 85% !important;
+  border-top: 2px solid #605D55;
+  opacity: 30%;
+  gap: 2px;
 }
 
 main {
@@ -62,6 +71,10 @@ main {
   opacity: 36%;
   box-shadow: 4px 4px 4px #010101;
   margin: 0;
+}
+
+.tophr {
+  justify-self: center;
 }
 
 .textupper {
@@ -107,35 +120,59 @@ main {
   overflow: hidden;
   position: relative;
 }
-
+ /*banner is used to place my main section where im showing cv information*/
 .benner {
   display: flex;
   flex-direction: row;
-
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   margin: 30px;
   padding: 50px;
   background-color: #fffaee;
-  
   flex-wrap: wrap;
   gap: 20px;
+  height: auto;
+  
 }
+/*deviding benner between left and right side for better look*/
 
 .left {
   flex: 1; /* Takes up equal space */
-  text-align: start;
   flex-direction: column;
   margin-left: 10px;
   margin-top: 10px;
+  gap: 20px;
+  padding-right: 20px;
+
 }
 
 .right {
   flex: 2; /* Takes up more space */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
+  gap: 20px ;
   margin-top: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  height: auto;
+  gap: 10px;
+}
+.container hr {
+  border-top: 2px solid #605D55;
+  width: 55%;
+  margin-left: 5px;
+}
+
+.line { /* Full height of the container */
+  border: 2px solid #484233;
+  align-self: stretch;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  
 }
