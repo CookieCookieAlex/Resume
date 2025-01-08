@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-secondary: Inter, "Roboto", sans-serif;
@@ -18,24 +24,6 @@
   --navbar-color: #e8e0cd;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 30px;
-  margin-top: 5px;
-}
-.tophr {
-  justify-self: center;
-  width: 98%;
-}
-
 h1,
 h2,
 h3 {
@@ -43,6 +31,7 @@ h3 {
   color: var(--font-color-primary);
   padding: 5px;
 }
+
 p,
 h4 {
   font-family: var(--font-secondary);
@@ -58,11 +47,31 @@ hr {
   justify-self: start;
 }
 
+#top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.tophr {
+  justify-self: center;
+  width: 98%;
+}
+
 .bottomline {
   width: 85% !important;
   border-top: 2px solid #605d55;
   opacity: 30%;
   gap: 2px;
+}
+
+@media (max-width: 768px) {
+  #smallerletter {
+    font-size: 25px;
+  }
 }
 
 main {
@@ -71,6 +80,12 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 10px 10px;
+  }
 }
 
 .introduction {
@@ -98,6 +113,7 @@ main {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .textlower {
   padding: 5px 0;
   text-align: center;
@@ -107,7 +123,8 @@ main {
   letter-spacing: 2px;
   position: relative;
   margin-top: -33px;
-  z-index: 1; /* Ensure text appears above the photo */
+  z-index: 1;
+  /* Ensure text appears above the photo */
   text-align: center;
 }
 
@@ -149,10 +166,19 @@ main {
   height: auto;
   max-width: 1200px;
 }
+
+@media (max-width: 768px) {
+  .benner {
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+  }
+}
 /*deviding benner between left and right side for better look*/
 
 .left {
-  flex: 1; /* Takes up equal space */
+  flex: 1;
+  /* Takes up equal space */
   flex-direction: column;
   margin-left: 10px;
   margin-top: 10px;
@@ -160,7 +186,8 @@ main {
 }
 
 .right {
-  flex: 2; /* Takes up more space */
+  flex: 2;
+  /* Takes up more space */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -177,6 +204,7 @@ main {
   gap: 10px;
   margin-top: 10px;
 }
+
 .container hr {
   border-top: 2px solid #605d55;
   width: 55%;
@@ -189,10 +217,12 @@ main {
   align-self: stretch;
   margin: 80px 10px 80px 10px;
 }
+
 @media (max-width: 768px) {
   /* Target screen widths 768px and below */
   .line {
-    display: none; /* Completely hide the element */
+    display: none;
+    /* Completely hide the element */
   }
 }
 
@@ -203,6 +233,7 @@ main {
   margin: 0;
   cursor: pointer;
 }
+
 
 .arrowup {
   display: flex;
@@ -219,25 +250,32 @@ main {
 
 .navbar {
   display: flex;
-  flex-direction: row;
-  padding: 2%;
+  flex-direction: column;
+  padding: 5px;
   background-color: var(--navbar-color);
   z-index: 1;
   position: fixed;
   align-self: center;
-  border-radius: 50px;
-  top: 90vh;
-  gap: 20px;
+  border-radius: 40px;
+  top: 51vh;
+  right: 5vh;
+  gap: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s;
 }
-
 .navbar button {
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
   position: relative;
-  height: 48px; /* Fixed height to prevent movement */
-  width: 48px; /* Fixed width to prevent movement */
+  height: 48px;
+  /* Fixed height to prevent movement */
+  width: 48px;
+  /* Fixed width to prevent movement */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,7 +291,8 @@ main {
   height: 80%;
   width: 3%;
   background-color: var(--banner-color);
-  pointer-events: none; /* Prevents interaction with the line */
+  pointer-events: none;
+  /* Prevents interaction with the line */
 }
 
 /* Button press effect */
@@ -262,25 +301,44 @@ main {
   transition: transform 0.1s;
 }
 
+.navbar.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s;
+}
+
 .menu-button {
-  padding: 5px;
+  padding: 10px;
+  margin: 5px;
   background-color: var(--navbar-color);
   position: fixed;
   border-radius: 25%;
-  top: 91vh;
-  left: 70vh;
-  z-index: 1000;
+  z-index: 5;
   border: none;
   cursor: pointer;
-}
-.menu-button.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.menu-button.visible {
+  display: flex;
+  bottom: 4vh;
+  right: 5vh;
   opacity: 1;
-  visibility: visible;
+  transition: opacity 2s ease-in-out;
 }
 
+.menu-button:not(:hover) {
+  opacity: 0.3;
+}
 
+.menu-button:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}

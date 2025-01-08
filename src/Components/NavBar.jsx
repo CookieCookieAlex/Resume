@@ -4,6 +4,7 @@ import School from "../assets/School.svg";
 import Info from "../assets/Info.svg";
 import PaperClip from "../assets/PaperClip.svg";
 import FileDownload from "../assets/FileDownload.svg";
+import CV from "../assets/CV.svg";
 import React, { useState } from "react";
 
 
@@ -26,6 +27,9 @@ export default function NavBar() {
                 </button>
                 <button>
                     <img src={School} alt="School" className="svg-img-button" />
+                </button>
+                <button>
+                    <img src={CV} alt="CV" className="svg-img-button" />
                 </button>
                 <button>
                     <img src={Info} alt="Info" className="svg-img-button" />
