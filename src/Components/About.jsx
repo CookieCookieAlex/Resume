@@ -2,7 +2,6 @@ import React from 'react';
 import { ABOUTME } from '../ResumeData'; // Adjust the path as needed
 
 export default function About() {
-    const { title, description } = ABOUTME[0];
 
     return (
         <section>

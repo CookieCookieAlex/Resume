@@ -22,6 +22,7 @@ export default function Benner() {
                 <Education><h1>EDUCATION</h1></Education>
                 <Experience><h1>EXPERIENCE</h1></Experience>
             </div>
+            
         </section>
     )
 }
