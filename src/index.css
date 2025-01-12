@@ -235,17 +235,35 @@ main {
 }
 
 
-.arrowup {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  background-color: var(--navbar-color);
-  z-index: 1;
+.arrowup {  
   position: fixed;
-  align-self: center;
-  border-radius: 50px;
-  top: 80vh;
-  gap: 20px;
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for the button's width */
+  background-color: var(--navbar-color);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0.5;
+  visibility: visible;
+  transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.arrowup:hover {
+  opacity: 1;
+  transform: scale(1.2) translateX(-40%);  
+}
+
+.arrowup img {
+  width: 2rem;
+  height: 2rem;
 }
 
 .navbar {
@@ -255,57 +273,41 @@ main {
   background-color: var(--navbar-color);
   z-index: 1;
   position: fixed;
-  align-self: center;
   border-radius: 40px;
-  top: 51vh;
-  right: 5vh;
-  gap: 10px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-  opacity: 0;
+  top: 53vh; /* Positioned relative to the menu button */
+  right: 6vh; /* Matches menu button position */
+  gap: 5px;
   visibility: hidden;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s;
-}
-.navbar button {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  position: relative;
-  height: 48px;
-  /* Fixed height to prevent movement */
-  width: 48px;
-  /* Fixed width to prevent movement */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Divider line */
-.navbar button:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -15%;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 80%;
-  width: 3%;
-  background-color: var(--banner-color);
-  pointer-events: none;
-  /* Prevents interaction with the line */
-}
-
-/* Button press effect */
-.navbar button:active img {
-  transform: scale(0.9);
-  transition: transform 0.1s;
+  clip-path: inset(100% 0 0 0); /* Fully hidden */
+  transition: clip-path 0.3s ease-in-out, visibility 0s 0.3s;
 }
 
 .navbar.active {
-  transform: translateY(0);
   opacity: 1;
-  visibility: visible;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s;
+  visibility: visible; /* Make visible immediately on activation */
+  clip-path: inset(0 0 0 0); /* Fully visible */
+  transition: clip-path 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar button {
+  background: transparent;
+  border: none;
+  padding: 20%;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+/* Button press effect */
+.navbar button:active img {
+  transform: scale(0.8);
+  transition: transform 0.1s;
 }
 
 .menu-button {
@@ -324,14 +326,11 @@ main {
   transition: opacity 2s ease-in-out;
 }
 
-.menu-button:not(:hover) {
-  opacity: 0.3;
+.menu-button:active img {
+  transform: scale(0.8);
+  transition: transform 0.1s;
 }
 
-.menu-button:hover {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
 
 @media (min-width: 768px) {
   .navbar {
@@ -341,4 +340,12 @@ main {
   .menu-button {
     display: none;
   }
+  .section {
+    display: none;
+}
+
+  .section.active {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
 }

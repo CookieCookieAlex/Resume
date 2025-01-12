@@ -4,7 +4,7 @@ import DigitalSkills from "./DIgitalSkills";
 import Education from "./Education";
 import Experience from "./Experience";
 import Languages from "./Languages";
-
+import TopButton from "../Components/TopButton";
 
 
 
@@ -22,6 +22,7 @@ export default function Benner() {
                 <Education><h1>EDUCATION</h1></Education>
                 <Experience><h1>EXPERIENCE</h1></Experience>
             </div>
+            <TopButton />
             
         </section>
     )
