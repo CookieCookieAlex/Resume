@@ -274,7 +274,7 @@ main {
   z-index: 1;
   position: fixed;
   border-radius: 40px;
-  top: 53vh; /* Positioned relative to the menu button */
+  top: 70vh; /* Positioned relative to the menu button */
   right: 6vh; /* Matches menu button position */
   gap: 5px;
   visibility: hidden;
@@ -348,4 +348,15 @@ main {
     display: block;
     transition: opacity 0.5s ease-in-out;
 }
+}
+
+
+.link {
+  color: var(--font-color-secondary); /* Set custom color */
+  font-family: var(--font-secondary);
+  text-decoration: none; /* Remove underline */
+}
+
+.link:hover {
+  text-decoration: none; /* Add underline on hover */
 }

@@ -7,8 +7,7 @@ export default function Contacts() {
             <hr />
               {CONTACT.map((item) => (
                             <div key={item.id}>
-                                <h1>{item.title}</h1>
-                                <p>{item.description}</p>
+                                <a href={item.description} target="_blank" className='link'>{item.title}</a>
                             </div>
                         ))}
             <hr className="bottomline"/>

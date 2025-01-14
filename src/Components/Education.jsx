@@ -4,7 +4,7 @@ import { EDUCATION } from '../ResumeData'; // Adjust the path as needed
 export default function Education() {
     return (
         <section>
-            <h1>EDUCATION</h1>
+            <h1 id='education'>EDUCATION</h1>
             <hr />
             {EDUCATION.map((item, index) => (
                 <div key={index} className="container">

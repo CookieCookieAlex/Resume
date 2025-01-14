@@ -5,7 +5,7 @@ export default function About() {
 
     return (
         <section>
-               <h1>ABOUT ME</h1>
+               <h1 id='about'>ABOUT ME</h1>
             {ABOUTME.map((item, index) => (
                 <div key={index} className="container">
                  
