@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ArrowUp from "../assets/ArrowUp.svg"; // Replace with your arrow image/icon
+import ArrowUp from "../../public/ArrowUp.svg"; // Replace with your arrow image/icon
 
 export default function TopButton() {
   const [isVisible, setIsVisible] = useState(false);

@@ -147,35 +147,15 @@ export const WORKEXPERIENCE = [
 
 export const CONTACT = [
   {
-   id: 1, title: "Phone",
-    description: "+385 91 99 99 99",
+    id: 1, title: "GitHub",
+    description: "https://github.com/CookieCookieAlex",
   },
   {
-    id: 2, title: "Email",
-    description: "2V3dI@example.com",
+    id: 2, title: "LinkedIn",
+    description: "https://www.linkedin.com/in/leonardo-mi%C5%A1%C4%8Devi%C4%87-2541b4189/",
   },
   {
-    id: 3, title: "GitHub",
-    description: "https://github.com/LeonardoMiscevic",
-  },
-  {
-    id: 4, title: "LinkedIn",
-    description: "https://www.linkedin.com/in/leomiscevic/",
-  },
-  {
-    id: 5, title: "Instagram",
-    description: "https://www.instagram.com/leomiscevic/",
-  },
-  {
-    id: 6, title: "Facebook",
-    description: "https://www.facebook.com/leomiscevic/",
-  },
-  {
-    id: 7, title: "Discrord",
-    description: "https://discord.com/users/leomiscevic",
-  },
-  {
-    id: 8, title: "Thread",
-    description: "https://www.reddit.com/user/leomiscevic",
-  },
+    id: 3, title: "Instagram",
+    description: "https://www.instagram.com/leonardo_miscevic",
+  }
 ];

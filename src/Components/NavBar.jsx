@@ -1,10 +1,10 @@
-import Menu from "../assets/Menu.svg";
-import Suitcase from "../assets/Suitcase.svg";
-import School from "../assets/School.svg";
-import Info from "../assets/Info.svg";
-import PaperClip from "../assets/PaperClip.svg";
-import FileDownload from "../assets/FileDownload.svg";
-import CV from "../assets/CV.svg";
+import Menu from "../../public/Menu.svg";
+import Suitcase from "../../public/Suitcase.svg";
+import School from "../../public/School.svg";
+import Info from "../../public/Info.svg";
+import PaperClip from "../../public/PaperClip.svg";
+import FileDownload from "../../public/FileDownload.svg";
+import CV from "../../public/CV.svg";
 import React, { useState } from "react";
 
 

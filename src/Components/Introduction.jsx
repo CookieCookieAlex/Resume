@@ -1,4 +1,4 @@
-import photo from '../assets/leonardo-miscevic.jpg'
+import photo from '../../public/leonardo-miscevic.jpg'
 
 export default function Introduction() {
     return (

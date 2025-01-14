@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Moon from '../assets/Moon.svg';
-import Sun from '../assets/Sun.svg';
+import Moon from '../../public/Moon.svg';
+import Sun from '../../public/Sun.svg';
 
 export default function ThemeButton() {
 

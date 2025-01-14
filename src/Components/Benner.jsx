@@ -14,8 +14,8 @@ export default function Benner() {
             <div className="left">
                 <About />
                 <Languages />
-                <Contacts />
                 <DigitalSkills />
+                <Contacts />
             </div>
             <div className="line"></div>
             <div className="right">
