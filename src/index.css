@@ -265,7 +265,6 @@ main {
   width: 2rem;
   height: 2rem;
 }
-
 .navbar {
   display: flex;
   flex-direction: column;
@@ -273,8 +272,8 @@ main {
   background-color: var(--navbar-color);
   z-index: 1;
   position: fixed;
-  border-radius: 40px; /* Kept your original border-radius */
-  top: calc(70vh + env(safe-area-inset-top)); /* Adjusted to prevent movement */
+  border-radius: 40px;
+  top: 70vh; /* Positioned relative to the menu button */
   right: 6vh; /* Matches menu button position */
   gap: 5px;
   visibility: hidden;
@@ -300,8 +299,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
-
 
 /* Button press effect */
 .navbar button:active img {
@@ -324,6 +323,7 @@ main {
   opacity: 1;
   transition: opacity 2s ease-in-out;
 }
+
 
 .menu-button:active img {
   transform: scale(0.8);
