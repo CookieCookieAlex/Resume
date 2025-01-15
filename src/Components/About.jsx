@@ -1,12 +1,12 @@
 import React from 'react';
-import { ABOUTME } from '../ResumeData'; // Adjust the path as needed
+import { ResumeData } from '../ResumeData.js'; // Adjust the path as needed
 
 export default function About() {
 
     return (
         <section>
                <h1 id='about'>ABOUT ME</h1>
-            {ABOUTME.map((item, index) => (
+            {ResumeData.aboutMe.map((item, index) => (
                 <div key={index} className="container">
                  
                     <hr />

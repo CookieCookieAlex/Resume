@@ -1,12 +1,12 @@
 import React from 'react';
-import { WORKEXPERIENCE } from '../ResumeData'; // Adjust the path as needed
+import { ResumeData } from '../ResumeData.js'; // Adjust the path as needed
 
 export default function Experience() {
     return (
         <section >
             <h1 id='experience'>WORK EXPERIENCE</h1>
             <hr />
-            {WORKEXPERIENCE.map((item, index) => (
+            {ResumeData.workExperience.map((item, index) => (
                 <div key={index} className="container">
                     <h1>{item.title}</h1>
                     <hr />

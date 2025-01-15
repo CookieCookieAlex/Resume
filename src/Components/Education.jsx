@@ -1,12 +1,12 @@
 import React from 'react';
-import { EDUCATION } from '../ResumeData'; // Adjust the path as needed
+import { ResumeData } from '../ResumeData.js'; // Adjust the path as needed
 
 export default function Education() {
     return (
         <section>
             <h1 id='education'>EDUCATION</h1>
             <hr />
-            {EDUCATION.map((item, index) => (
+            {ResumeData.education.map((item, index) => (
                 <div key={index} className="container">
                     <h1>{item.title}</h1>
                     <hr />
