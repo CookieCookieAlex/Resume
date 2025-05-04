@@ -1,4 +1,4 @@
-import photo from '../../public/lm.jpg';
+import photo from '../public/lm.jpg';
 import { ResumeData } from '../ResumeData.js';
 
 export default function Introduction() {

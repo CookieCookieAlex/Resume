@@ -1,7 +1,7 @@
-import Menu from "../../public/Menu.svg";
-import Suitcase from "../../public/Suitcase.svg";
-import School from "../../public/School.svg";
-import Info from "../../public/Info.svg";
+import Menu from "../public/Menu.svg";
+import Suitcase from "../public/Suitcase.svg";
+import School from "../public/School.svg";
+import Info from "../public/Info.svg";
 import React, { useState } from "react";
 import NavButtons from "./NavButtons";
 export default function NavBar() {
